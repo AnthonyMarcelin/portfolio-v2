@@ -6,34 +6,13 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const cards = [
-  {
-    id: 1,
-    src: "/work/1.png",
-  },
-  {
-    id: 2,
-    src: "/work/2.png",
-  },
-  {
-    id: 3,
-    src: "/work/3.png",
-  },
-  {
-    id: 4,
-    src: "/work/4.png",
-  },
-  {
-    id: 5,
-    src: "/work/5.png",
-  },
-  {
-    id: 6,
-    src: "/work/6.png",
-  },
-  {
-    id: 7,
-    src: "/work/7.png",
-  },
+  { id: 1, src: "/work/gosportnow-1.png" },
+  { id: 2, src: "/work/gosportnow-2.png" },
+  { id: 3, src: "/work/weekplanner-1.png" },
+  { id: 4, src: "/work/weekplanner-2.png" },
+  { id: 5, src: "/work/skillswap-1.png" },
+  { id: 6, src: "/work/skillswap-2.png" },
+  { id: 7, src: "/work/forge-preview.png" },
 ];
 
 export const WorkCardShuffle = () => {
@@ -71,7 +50,7 @@ export const WorkCardShuffle = () => {
                 <div className="w-full h-full relative overflow-hidden rounded-[14px]">
                   <Image
                     src={card.src}
-                    alt={`Project ${card.id} showcase`}
+                    alt={`Aperçu projet ${card.id}`}
                     fill
                     className="object-cover pointer-events-none"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -85,7 +64,7 @@ export const WorkCardShuffle = () => {
         </motion.div>
       </AnimatePresence>
       <span className="text-primary text-sm z-10 font-mono font-normal uppercase mr-10">
-        Let's make it resonate.
+        À chaque problème sa solution.
       </span>
     </div>
   );
