@@ -18,3 +18,4 @@ export const projects = [
     xlink: "https://github.com/AnthonyMarcelin/SkillSwap",
   },
 ];
+
