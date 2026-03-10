@@ -6,13 +6,13 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const cards = [
-  { id: 1, src: "/work/gosportnow-1.png" },
-  { id: 2, src: "/work/gosportnow-2.png" },
-  { id: 3, src: "/work/weekplanner-1.png" },
-  { id: 4, src: "/work/weekplanner-2.png" },
-  { id: 5, src: "/work/skillswap-1.png" },
-  { id: 6, src: "/work/skillswap-2.png" },
-  { id: 7, src: "/work/forge-preview.png" },
+  { id: 1, src: "/work/GSN-01.png" },
+  { id: 2, src: "/work/GSN-02.png" },
+  { id: 3, src: "/work/planner-01.png" },
+  { id: 4, src: "/work/planner-02.png" },
+  { id: 5, src: "/work/FDS-01.png" },
+  { id: 6, src: "/work/FDS-02.png" },
+  { id: 7, src: "/work/GSN-01.png" },
 ];
 
 export const WorkCardShuffle = () => {
@@ -27,8 +27,8 @@ export const WorkCardShuffle = () => {
           className="relative flex items-center h-[250px] w-full xl:pl-36 z-50 group"
         >
           {cards.map((card, index) => {
-            const x = index * 60 - ((cards.length - 1) * 30) / 2;
-            const hoverX = index * 30 - ((cards.length - 1) * 30) / 2;
+            const x = index * 85 - ((cards.length - 1) * 45) / 2;
+            const hoverX = index * 45 - ((cards.length - 1) * 45) / 2;
 
             return (
               <motion.div

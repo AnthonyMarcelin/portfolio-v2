@@ -2,9 +2,9 @@
 
 import { Attachment01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import Image from "next/image";
 import Link from "next/link";
 import { projectData } from "@/lib/data/home";
-import { Video } from "./ui/video";
 
 export const WorkStuff = () => {
   return (
@@ -12,21 +12,29 @@ export const WorkStuff = () => {
       {projectData.map((item) => (
         <section className="flex flex-col gap-4" key={item.project}>
           <div className="rounded-xl border border-border bg-card p-1.5 shadow-md shadow-border">
-            <Video
-              src={item.video}
-              className="h-full w-full rounded-lg object-cover lg:w-full"
-            />
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+              <Image
+                src={item.image}
+                alt={item.project}
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
-          <div className="">
-            <Link
-              href={item.link}
-              className="font-medium uppercase flex items-center gap-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md touch-manipulation hover:text-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <HugeiconsIcon icon={Attachment01Icon} className="size-4" />
-              {item.project}
-            </Link>
+          <div>
+{item.link ? (
+  <Link href={item.link} className="..." target="_blank" rel="noopener noreferrer">
+    <HugeiconsIcon icon={Attachment01Icon} className="size-4" />
+    {item.project}
+  </Link>
+) : (
+  <span className="font-medium uppercase flex items-center gap-2">
+    <HugeiconsIcon icon={Attachment01Icon} className="size-4" />
+    {item.project}
+    <span className="text-xs text-muted-foreground normal-case">(repo privé)</span>
+  </span>
+)}
+
             <p className="text-muted-foreground font-sans">
               {item.description}
             </p>

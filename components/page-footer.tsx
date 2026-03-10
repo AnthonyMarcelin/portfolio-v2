@@ -19,15 +19,8 @@ export const PageFooter = () => {
         >
           GitHub
         </Link>
-        {" "}— inspiré de{" "}
-        <Link
-          href="https://github.com/diip3sh/portfolio"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline font-mono hover:text-primary transition-colors"
-        >
-          diip3sh
-        </Link>
+        {" "}
+        <span className="text-xs opacity-50">(base : diip3sh/portfolio)</span>
       </span>
       <div className="flex gap-2 items-center">
         <span>Retrouve-moi sur</span>

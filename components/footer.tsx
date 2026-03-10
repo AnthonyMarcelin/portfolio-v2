@@ -4,7 +4,6 @@ import {
   Briefcase09Icon,
   FolderLibraryIcon,
   Home09Icon,
-  UserIcon,
   VictoryFinger03Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -55,9 +54,7 @@ export default function Footer() {
                 href={tab.href}
                 ref={activeTab === tab.name ? activeTabElementRef : null}
                 data-tab={tab.name}
-                onClick={() => {
-                  setActiveTab(tab.name);
-                }}
+                onClick={() => setActiveTab(tab.name)}
                 className="px-3 py-1.5 flex items-center gap-2 text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md touch-manipulation"
               >
                 {tab.icon}
@@ -78,9 +75,7 @@ export default function Footer() {
                 <Link
                   href={tab.href}
                   data-tab={tab.name}
-                  onClick={() => {
-                    setActiveTab(tab.name);
-                  }}
+                  onClick={() => setActiveTab(tab.name)}
                   className="px-3 py-1.5 flex items-center gap-2 text-primary font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md touch-manipulation"
                   tabIndex={-1}
                 >
@@ -93,9 +88,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="hidden md:block text-sm  uppercase tracking-tight">
+      <div className="hidden md:block text-sm uppercase tracking-tight">
         <div className="flex items-end gap-2">
-          2026 © <span className="lowercase"> Anthony Marcelin</span>.{" "}
+          2026 © <span className="lowercase">Anthony Marcelin</span>.{" "}
           <HugeiconsIcon
             icon={VictoryFinger03Icon}
             className="size-4 inline-block"
@@ -114,18 +109,13 @@ const TABS = [
     href: "/",
   },
   {
+    name: "Projets",
+    icon: <HugeiconsIcon icon={FolderLibraryIcon} className="size-4" />,
+    href: "/projects",
+  },
+  {
     name: "Work",
     icon: <HugeiconsIcon icon={Briefcase09Icon} className="size-4" />,
     href: "/work",
-  },
-  {
-    name: "Craft",
-    icon: <HugeiconsIcon icon={FolderLibraryIcon} className="size-4" />,
-    href: "/craft",
-  },
-  {
-    name: "About",
-    icon: <HugeiconsIcon icon={UserIcon} className="size-4" />,
-    href: "/about",
   },
 ];

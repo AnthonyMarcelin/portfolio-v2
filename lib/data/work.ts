@@ -5,9 +5,9 @@ export const work = [
     date: "Avril 2026 →",
     title: "Développeur freelance",
     badge: "Auto-entreprise",
-    location: "La Teste-de-Buch · Remote",
+    location: "Saint Laurent Medoc · Remote",
     url: "https://forgedigitalesolutions.com",
-    image: "/forge-digitalesolutions.png",
+    image: "/work/FDS-logo.png",
     description: [
       "Auto-entreprise pour pratiquer et facturer en attendant le bon CDI.",
       "Développement de solutions web fullstack pour clients locaux.",
@@ -15,26 +15,29 @@ export const work = [
     ]
   },
   {
-    id: "2",
-    company: "Formation Titre Pro CDA",
-    date: "Nov 2024 - Sept 2025",
-    title: "Concepteur Développeur d'Applications",
-    badge: "Formation certifiante",
-    location: "France",
-    image: "/afpa-cda.png",
+    id: "1.5",
+    company: "Freelance",
+    date: "2026",
+    title: "Projkt",
+    badge: "Outil métier",
+    location: "Saint Laurent Medoc · Remote",
+    // url: "https://forgedigitalesolutions.com",
+    image: "/work/projkt-logo.png",
     description: [
-      "SkillSwap — React + MVC + PostgreSQL (projet de fin de formation)",
-      "Apprentissage intensif fullstack : frontend, backend, mobile."
+      "Dashboard de gestion de projets clients",
+      "Intégration API invoice ninja pour la facturation / suivi délai",
+      "Laravel + Inertia + VueJS"
     ]
   },
   {
-    id: "3",
+    id: "2",
     company: "Week Planner",
-    date: "2025",
+    date: "2026",
     title: "Projet personnel fullstack",
-    location: "En production",
+    badge: "Outil maison",
+    location: "Saint Laurent Medoc · Remote",
     url: "https://planner.drannocserver.com",
-    image: "/week-planner-preview.png",
+    image: "/work/planner-logo.png",
     description: [
       "Outil perso de planification hebdo — rien ne convenait sur les stores.",
       "Laravel + Inertia + React. Déployé et utilisé quotidiennement.",
@@ -42,14 +45,28 @@ export const work = [
     ]
   },
   {
+    id: "3",
+    company: "Formation Titre Pro CDA",
+    date: "Nov 2024 - Sept 2025",
+    title: "Concepteur Développeur d'Applications",
+    badge: "Formation certifiante",
+    location: "France",
+    image: "/work/oclock-logo.png",
+    description: [
+      "SkillSwap — React + MVC + PostgreSQL (projet de fin de formation)",
+      "Apprentissage intensif fullstack : frontend, backend, mobile."
+    ]
+  },
+  {
     id: "4",
     company: "Chauffeur-grutier",
     date: "2006 - 2024",
-    title: "20 ans de précision absolue",
-    badge: "Compétences transférables",
-    location: "Chantiers France",
-    image: "/grue-chantier.png",
+    title: "18 ans de précision absolue",
+    badge: "Compétences transversales",
+    location: "Chantiers France / Europe",
+    image: "/work/crane-logo.png",
     description: [
+      "Transport urgent dans toute l'europe, gestion du temps, organisation.",
       "Gestion charges lourdes, coordination équipe chantier, zéro droit à l'erreur.",
       "Rigueur, anticipation risques, satisfaction client, résolution problèmes.",
       "Réflexes directement transférables au développement : vérifier avant de coder."

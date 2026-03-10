@@ -15,7 +15,7 @@ import {
   domainsData,
   faqs,
   homeSection1,
-  openSourceContributions,
+  projectData,
   stackData,
   whatIBuildData,
 } from "@/lib/data/home";
@@ -47,9 +47,9 @@ const HomeGridOne = () => {
 
       <section className="flex flex-col gap-4 lg:max-w-3/4">
         <div className="text-5xl font-sans font-semibold tracking-tight text-wrap">
-          20 ans à ne pas avoir le droit à l'erreur.
+          20 ans à orchestrer des chantiers.
           <br />
-          Le code, c'est pareil.
+          Maintenant j'orchestre du code.
         </div>
         <div className="flex gap-2.5 items-center w-full">
           <SocialButton onClickAction={"mailto:anthony.marcelin13@gmail.com"}>
@@ -66,6 +66,9 @@ const HomeGridOne = () => {
 const HomeGridTwo = () => {
   return (
     <div className="flex flex-col gap-12">
+
+      <WorkCardShuffle />
+
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-8">
         <div className="flex flex-col gap-2">
           <h4 className="text-muted-foreground uppercase text-sm">
