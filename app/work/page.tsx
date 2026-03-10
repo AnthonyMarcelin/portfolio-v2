@@ -16,8 +16,9 @@ const WorkGridOne = () => {
       <section className="flex flex-col gap-6">
         <TitleText title="Works" />
         <p className="text-wrap text-muted-foreground max-w-3/4 font-sans">
-          From zero to shipped, from startups to market leaders — here's my work
-          experience.
+          Grutier → dev. // Chantiers → code.
+          <br />
+          Mon parcours.
         </p>
       </section>
     </div>
@@ -27,7 +28,7 @@ const WorkGridOne = () => {
 const WorkGridTwo = () => {
   return (
     <div className="flex flex-col gap-6">
-      <SubHeadingText text="Here's my work experience" />
+      <SubHeadingText text="Parcours professionnel" />
       {work.map((item) => (
         <div key={item.id} className="flex flex-col gap-4">
           <div className="flex w-full flex-row items-center justify-between gap-4 overflow-hidden">
