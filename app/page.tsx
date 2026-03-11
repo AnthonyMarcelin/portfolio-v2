@@ -32,16 +32,17 @@ const HomeGridOne = () => {
       <section className="flex flex-col">
         {homeSection1.map((item) => (
           <div
-            key={item.title}
-            className="grid grid-cols-3 lg:grid-cols-5 gap-2"
-          >
-            <h3 className="col-span-1 text-muted-foreground uppercase">
-              {item.title}
-            </h3>
-            <span className="col-span-2 lg:col-span-3 font-sans">
-              {item.value}
-            </span>
-          </div>
+  key={item.title}
+  className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4"
+>
+  <h3 className="col-span-1 text-muted-foreground uppercase">
+    {item.title}
+  </h3>
+  <span className="col-span-1 sm:col-span-2 lg:col-span-3 font-sans">
+    {item.value}
+  </span>
+</div>
+
         ))}
       </section>
 
