@@ -128,10 +128,10 @@ export const projectData = [
   },
   {
     project: "Go Sport Now",
-    // link: "https://github.com/AnthonyMarcelin/GoSportNow",
+    link: "https://gosportnow.fr",
     image: "/work/GSN-01.png",
     description:
       "Application mobile de mise en relation sportive. Projet d'équipe — React Native + NestJS.",
-    stars: "GitHub",
+    stars: "Landing",
   },
 ];

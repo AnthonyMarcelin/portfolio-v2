@@ -11,8 +11,8 @@ export const work = [
     description: [
       "Auto-entreprise pour pratiquer et facturer en attendant le bon CDI.",
       "Développement de solutions web fullstack pour clients locaux.",
-      "Next.js, React, Laravel, NestJS selon les besoins projets."
-    ]
+      "Next.js, React, Laravel, NestJS selon les besoins projets.",
+    ],
   },
   {
     id: "1.5",
@@ -26,8 +26,8 @@ export const work = [
     description: [
       "Dashboard de gestion de projets clients",
       "Intégration API invoice ninja pour la facturation / suivi délai",
-      "Laravel + Inertia + VueJS"
-    ]
+      "Laravel + Inertia + VueJS",
+    ],
   },
   {
     id: "2",
@@ -41,8 +41,8 @@ export const work = [
     description: [
       "Outil perso de planification hebdo — rien ne convenait sur les stores.",
       "Laravel + Inertia + React. Déployé et utilisé quotidiennement.",
-      "Prouve l'autonomie complète : conception → code → déploiement."
-    ]
+      "Prouve l'autonomie complète : conception → code → déploiement.",
+    ],
   },
   {
     id: "3",
@@ -54,8 +54,8 @@ export const work = [
     image: "/work/oclock-logo.png",
     description: [
       "SkillSwap — React + MVC + PostgreSQL (projet de fin de formation)",
-      "Apprentissage intensif fullstack : frontend, backend, mobile."
-    ]
+      "Apprentissage intensif fullstack : frontend, backend, mobile.",
+    ],
   },
   {
     id: "4",
@@ -69,7 +69,7 @@ export const work = [
       "Transport urgent dans toute l'europe, gestion du temps, organisation.",
       "Gestion charges lourdes, coordination équipe chantier, zéro droit à l'erreur.",
       "Rigueur, anticipation risques, satisfaction client, résolution problèmes.",
-      "Réflexes directement transférables au développement : vérifier avant de coder."
-    ]
-  }
+      "Réflexes directement transférables au développement : vérifier avant de coder.",
+    ],
+  },
 ];
