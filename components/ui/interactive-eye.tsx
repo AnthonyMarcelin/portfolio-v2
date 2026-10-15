@@ -140,7 +140,8 @@ export function InteractiveEyes({
 // Keep single eye export for backward compatibility
 export { Eye as InteractiveEye };
 
-// Light mode wears shades; they lift off and fade out in dark mode.
+// Light mode wears shades; hovering the contact button slides them down the
+// nose so the eyes peek over. They lift off and fade out in dark mode.
 function Sunglasses({ size, gap }: { size: number; gap: number }) {
   const width = size * 2 + gap;
   const lensHeight = size * 0.62;
@@ -151,7 +152,7 @@ function Sunglasses({ size, gap }: { size: number; gap: number }) {
       width={width + 4}
       height={size}
       viewBox={`-2 0 ${width + 4} ${size}`}
-      className="pointer-events-none absolute -left-0.5 top-0 transition-[opacity,transform] duration-500 ease-out dark:-translate-y-3 dark:rotate-[-8deg] dark:opacity-0 motion-reduce:transition-none"
+      className="pointer-events-none absolute -left-0.5 top-0 transition-[opacity,transform] duration-500 ease-out group-hover:translate-y-[40%] group-hover:rotate-[4deg] dark:-translate-y-3 dark:rotate-[-8deg] dark:opacity-0 motion-reduce:transition-none"
     >
       {[0, size + gap].map((x) => (
         <g key={x}>

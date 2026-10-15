@@ -31,7 +31,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
           <Link
             href="mailto:anthony.marcelin13@gmail.com"
             rel="noopener noreferrer"
-            className="p-0.75 bg-primary/10 rounded-full"
+            className="group p-0.75 bg-primary/10 rounded-full"
           >
             <div className="flex items-center gap-2.5 bg-primary shadow-md rounded-full font-sans">
               <span className="ml-4 py-1.5 text-muted dark:text-white font-semibold">
