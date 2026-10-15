@@ -41,7 +41,7 @@ pnpm build    # production build
 pnpm lint     # Biome
 ```
 
-Deployed on Railway (pnpm lockfile).
+Work happens on `dev`. Merging into `main` deploys to Dokploy (Docker build from the `Dockerfile`, port 3000).
 
 ### Credits
 
@@ -86,7 +86,7 @@ pnpm build    # build de production
 pnpm lint     # Biome
 ```
 
-Déployé sur Railway (lockfile pnpm).
+On travaille sur `dev`. Un merge sur `main` déploie sur Dokploy (build Docker depuis le `Dockerfile`, port 3000).
 
 ### Crédits
 
