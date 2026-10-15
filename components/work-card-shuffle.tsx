@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 
 const cards = [
   { id: 1, src: "/work/GSN-01.png" },
-  { id: 2, src: "/work/GSN-02.png" },
-  { id: 3, src: "/work/planner-01.png" },
-  { id: 4, src: "/work/planner-02.png" },
-  { id: 5, src: "/work/FDS-01.png" },
-  { id: 6, src: "/work/FDS-02.png" },
-  { id: 7, src: "/work/GSN-01.png" },
+  { id: 2, src: "/work/SZ-01.png" },
+  { id: 3, src: "/work/MV-01.png" },
+  { id: 4, src: "/work/FDS-01.png" },
+  { id: 5, src: "/work/GSN-02.png" },
+  { id: 6, src: "/work/SZ-02.png" },
+  { id: 7, src: "/work/MV-02.png" },
 ];
 
 export const WorkCardShuffle = () => {

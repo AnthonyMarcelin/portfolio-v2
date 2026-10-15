@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Anthony Marcelin",
   },
   description:
-    "Développeur web junior. 20 ans chauffeur-grutier → reconversion dev. Next.js, React, Laravel, NestJS, React Native. CDI disponible.",
+    "Concepteur Développeur d'Applications. 18 ans chauffeur-grutier → reconversion dev. Next.js, React, Laravel, NestJS, React Native. CDI ou alternance, Bordeaux et alentours ou remote.",
   keywords: [
     "Anthony Marcelin",
     "développeur web",
@@ -34,6 +34,8 @@ export const metadata: Metadata = {
     "NestJS",
     "React Native",
     "CDI Gironde",
+    "alternance développeur",
+    "développeur Bordeaux",
     "reconversion dev",
     "portfolio développeur",
   ],
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anthony Marcelin — Développeur web junior",
     description:
-      "20 ans de rigueur sur chantier → développeur web. Next.js, React, Laravel, NestJS. CDI disponible La Teste-de-Buch.",
+      "18 ans de rigueur sur chantier → développeur web. Next.js, React, Laravel, NestJS, React Native. CDI ou alternance, Bordeaux et alentours ou remote.",
     url: "https://forgedigitalesolutions.com",
     siteName: "Anthony Marcelin Portfolio",
     images: ["/og.png"],

@@ -1,9 +1,11 @@
 "use client";
 
-import { useRef, useState, useEffect, createContext, useContext } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 // Shared context for synchronized blinking
-const BlinkContext = createContext<{ isBlinking: boolean }>({ isBlinking: false });
+const BlinkContext = createContext<{ isBlinking: boolean }>({
+  isBlinking: false,
+});
 
 interface InteractiveEyeProps {
   size?: number;
@@ -11,7 +13,11 @@ interface InteractiveEyeProps {
   className?: string;
 }
 
-function Eye({ size = 24, pupilSize = 12, className = "" }: InteractiveEyeProps) {
+function Eye({
+  size = 24,
+  pupilSize = 12,
+  className = "",
+}: InteractiveEyeProps) {
   const eyeRef = useRef<HTMLDivElement>(null);
   const [pupilPosition, setPupilPosition] = useState({ x: 0, y: 0 });
   const { isBlinking } = useContext(BlinkContext);
@@ -32,7 +38,7 @@ function Eye({ size = 24, pupilSize = 12, className = "" }: InteractiveEyeProps)
       const maxDistance = size / 2 - pupilSize / 2 - 2;
       const distance = Math.min(
         Math.sqrt(deltaX * deltaX + deltaY * deltaY),
-        maxDistance
+        maxDistance,
       );
 
       const x = Math.cos(angle) * distance;
@@ -53,8 +59,8 @@ function Eye({ size = 24, pupilSize = 12, className = "" }: InteractiveEyeProps)
         width: size,
         height: size,
         transform: isBlinking ? "scaleY(0.1)" : "scaleY(1)",
-        transition: isBlinking 
-          ? "transform 75ms ease-in" 
+        transition: isBlinking
+          ? "transform 75ms ease-in"
           : "transform 100ms ease-out",
         transformOrigin: "center",
       }}
@@ -94,26 +100,26 @@ export function InteractiveEyes({
   // Handle synchronized blinking
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReducedMotion) return;
 
     const scheduleBlink = () => {
       const randomDelay = blinkInterval + Math.random() * 4000;
-      
+
       return setTimeout(() => {
         setIsBlinking(true);
-        
+
         setTimeout(() => {
           setIsBlinking(false);
         }, 150);
-        
+
         scheduleBlink();
       }, randomDelay);
     };
 
     const timeoutId = scheduleBlink();
-    
+
     return () => clearTimeout(timeoutId);
   }, [blinkInterval]);
 

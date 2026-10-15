@@ -18,8 +18,7 @@ export const PageFooter = () => {
           className="underline font-bold uppercase tracking-normal font-mono hover:text-primary transition-colors"
         >
           GitHub
-        </Link>
-        {" "}
+        </Link>{" "}
         <span className="text-xs opacity-50">(base : diip3sh/portfolio)</span>
       </span>
       <div className="flex gap-2 items-center">

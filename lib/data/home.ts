@@ -1,18 +1,11 @@
-import {
-  CodeFreeIcons,
-  LaptopFreeIcons,
-  SmartPhone02FreeIcons,
-  ToolsFreeIcons,
-} from "@hugeicons/core-free-icons";
-
 export const homeSection1 = [
   {
     title: "Disponibilité",
-    value: "CDI",
+    value: "CDI · Alternance",
   },
   {
     title: "Localisation",
-    value: "Saint-Laurent-Médoc",
+    value: "Bordeaux et alentours · Remote",
   },
   {
     title: "Formation",
@@ -20,7 +13,7 @@ export const homeSection1 = [
   },
   {
     title: "Expérience",
-    value: "20 ans transport / Grutier → Dev",
+    value: "18 ans grutier → Dev",
   },
   {
     title: "Rôle",
@@ -47,22 +40,6 @@ export const workExperience = [
   },
 ];
 
-export const whatIBuildData = [
-  "Apps mobiles",
-  "Backends API",
-  "Interfaces React",
-  "Fullstack Laravel",
-  "Projets en prod",
-  "Solutions pragmatiques",
-];
-
-export const domainsData = [
-  { label: "Sport", logo: LaptopFreeIcons },
-  { label: "Planning", logo: SmartPhone02FreeIcons },
-  { label: "Échange", logo: CodeFreeIcons },
-  { label: "BTP", logo: ToolsFreeIcons },
-];
-
 export const stackData = [
   // Core
   { label: "Next.js", logo: "/nextjs.svg" },
@@ -83,7 +60,7 @@ export const stackData = [
 
 export const faqs = [
   {
-    question: "Ce que 20 ans de grue m'ont appris ?",
+    question: "Ce que 18 ans de grue m'ont appris ?",
     answer:
       "La rigueur absolue. Une charge mal calculée = chantier arrêté. Le code c'est pareil — on refléchit avant d'agir.",
   },
@@ -93,14 +70,14 @@ export const faqs = [
       "Je communique tôt sur les blocages. Go Sport Now m'a appris à m'adapter au rythme des autres sans bloquer personne.",
   },
   {
-    question: "CDI ou auto-entreprise ?",
+    question: "CDI ou alternance ?",
     answer:
-      "Les deux. Auto-entreprise pour pratiquer maintenant, CDI pour un projet sérieux sur la durée avec une équipe.",
+      "Les deux. Je cherche une équipe sur Bordeaux et alentours, ou en remote. En attendant, je livre des projets avec Forge Digitale.",
   },
   {
     question: "Ton premier gros projet ?",
     answer:
-      "Go Sport Now — parce que rien n'existait qui me convenait. Ça m'a forcé à penser conception avant de coder.",
+      "Go Sport Now — une app de sport conçue à trois, de la maquette jusqu'aux stores. Ça m'a forcé à penser conception avant de coder.",
   },
   {
     question: "Ta devise ?",
@@ -111,27 +88,35 @@ export const faqs = [
 
 export const projectData = [
   {
-    project: "Week Planner",
-    link: "https://github.com/AnthonyMarcelin/week-planner",
-    image: "/work/planner-01.png",
+    project: "Go Sport Now",
+    link: "https://gosportnow.fr",
+    image: "/work/GSN-01.png",
     description:
-      "Outil de planification hebdo que je n'ai pas trouvé sur les stores — donc je l'ai construit. Laravel + Inertia + React, en production.",
-    stars: "En prod",
+      "App de sport spontané, développée à trois. React Native + NestJS.",
+    status: "Sur les stores",
+  },
+  {
+    project: "Spawnzone",
+    link: "https://spawnzone.fr",
+    image: "/work/SZ-01.png",
+    description:
+      "App pour trouver des joueurs près de chez soi, sur les mêmes jeux et les mêmes horaires. iOS et Android.",
+    status: "Sur les stores",
+  },
+  {
+    project: "Médoc Vibes",
+    link: "https://medocvibes.fr",
+    image: "/work/MV-01.png",
+    description:
+      "L'app festive et loisirs du Médoc : restos, sorties, marchés, vide-greniers et surf.",
+    status: "Bientôt sur les stores",
   },
   {
     project: "Forge Digitale Solutions",
     link: "https://forgedigitalesolutions.com",
     image: "/work/FDS-01.png",
     description:
-      "Auto-entreprise pour développer des solutions web fullstack. Next.js, React, Laravel, NestJS selon les besoins projets.",
-    stars: "Freelance",
-  },
-  {
-    project: "Go Sport Now",
-    link: "https://gosportnow.fr",
-    image: "/work/GSN-01.png",
-    description:
-      "Application mobile de mise en relation sportive. Projet d'équipe — React Native + NestJS.",
-    stars: "Landing",
+      "Mon auto-entreprise : sites et applications sur-mesure, du Médoc à Bordeaux. Next.js, React, Laravel, NestJS.",
+    status: "Freelance",
   },
 ];

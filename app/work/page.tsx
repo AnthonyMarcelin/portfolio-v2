@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { Container } from "@/components/container";
 import { PageFooter } from "@/components/page-footer";
 import { SubHeadingText, TitleText } from "@/components/ui/text";
@@ -16,7 +17,7 @@ const WorkGridOne = () => {
       <section className="flex flex-col gap-6">
         <TitleText title="Works" />
         <p className="text-wrap text-muted-foreground max-w-3/4 font-sans">
-          Grutier → dev. // Chantiers → code.
+          {"Grutier → dev. // Chantiers → code."}
           <br />
           Mon parcours.
         </p>
@@ -32,7 +33,7 @@ const WorkGridTwo = () => {
       {work.map((item) => (
         <div key={item.id} className="flex flex-col gap-4">
           <div className="flex w-full flex-row items-center justify-between gap-4 overflow-hidden">
-            <Link target="_blank" href={item.url || ""} rel="noopener">
+            <MaybeLink href={item.url}>
               <div className="flex flex-row gap-2">
                 <Image
                   src={item.image}
@@ -57,7 +58,7 @@ const WorkGridTwo = () => {
                   </div>
                 </div>
               </div>
-            </Link>
+            </MaybeLink>
             <div className="flex min-w-24 flex-col justify-between whitespace-nowrap text-right text-xs">
               <div className="text-muted-foreground">{item.date}</div>
               <div className="text-muted-foreground">{item.location}</div>
@@ -79,3 +80,18 @@ const WorkGridTwo = () => {
     </div>
   );
 };
+
+const MaybeLink = ({
+  href,
+  children,
+}: {
+  href?: string;
+  children: ReactNode;
+}) =>
+  href ? (
+    <Link target="_blank" href={href} rel="noopener noreferrer">
+      {children}
+    </Link>
+  ) : (
+    children
+  );
