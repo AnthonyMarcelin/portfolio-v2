@@ -10,9 +10,11 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { type Lang, localePath, ui } from "@/lib/i18n";
 
-export default function Footer() {
+export default function Footer({ lang }: { lang: Lang }) {
   const pathname = usePathname();
+  const TABS = TABS_BY_LANG[lang];
   const [activeTab, setActiveTab] = useState<string>("");
   const containerRef = useRef<HTMLDivElement>(null);
   const activeTabElementRef = useRef<HTMLAnchorElement>(null);
@@ -22,7 +24,7 @@ export default function Footer() {
     if (currentTab) {
       setActiveTab(currentTab?.name);
     }
-  }, [pathname]);
+  }, [pathname, TABS]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -95,27 +97,29 @@ export default function Footer() {
             icon={VictoryFinger03Icon}
             className="size-4 inline-block"
           />{" "}
-          Merci pour votre attention !
+          {ui[lang].thanks}
         </div>
       </div>
     </div>
   );
 }
 
-const TABS = [
+const tabs = (lang: Lang) => [
   {
-    name: "Home",
+    name: ui[lang].nav.home,
     icon: <HugeiconsIcon icon={Home09Icon} className="size-4" />,
-    href: "/",
+    href: localePath(lang, "/"),
   },
   {
-    name: "Projets",
+    name: ui[lang].nav.projects,
     icon: <HugeiconsIcon icon={FolderLibraryIcon} className="size-4" />,
-    href: "/projects",
+    href: localePath(lang, "/projects"),
   },
   {
-    name: "Work",
+    name: ui[lang].nav.work,
     icon: <HugeiconsIcon icon={Briefcase09Icon} className="size-4" />,
-    href: "/work",
+    href: localePath(lang, "/work"),
   },
 ];
+
+const TABS_BY_LANG = { fr: tabs("fr"), en: tabs("en") };

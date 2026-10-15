@@ -1,16 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { type Lang, localePath, ui } from "@/lib/i18n";
+import { LangSwitch } from "./lang-switch";
 import { InteractiveEyes } from "./ui/interactive-eye";
 
-export default function Navbar() {
+export default function Navbar({ lang }: { lang: Lang }) {
+  const t = ui[lang];
   return (
     <div className="h-15 w-full py-2">
       <div className="flex items-center justify-between">
         <div className="p-px bg-muted rounded-xl ml-1.5">
           <Link
-            href="/"
+            href={localePath(lang, "/")}
             className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-xl"
-            aria-label="Accueil — Anthony Marcelin portfolio"
+            aria-label={t.homeLabel}
           >
             <Image
               src="/logo.png"
@@ -21,20 +24,23 @@ export default function Navbar() {
             />
           </Link>
         </div>
-        <Link
-          href="mailto:anthony.marcelin13@gmail.com"
-          rel="noopener noreferrer"
-          className="p-0.75 bg-primary/10 rounded-full"
-        >
-          <div className="flex items-center gap-2.5 bg-primary shadow-md rounded-full font-sans">
-            <span className="ml-4 py-1.5 text-muted font-semibold">
-              Me contacter
-            </span>
-            <div className="px-1.5">
-              <InteractiveEyes size={24} pupilSize={10} gap={8} />
+        <div className="flex items-center gap-2">
+          <LangSwitch lang={lang} label={t.switchLang} />
+          <Link
+            href="mailto:anthony.marcelin13@gmail.com"
+            rel="noopener noreferrer"
+            className="p-0.75 bg-primary/10 rounded-full"
+          >
+            <div className="flex items-center gap-2.5 bg-primary shadow-md rounded-full font-sans">
+              <span className="ml-4 py-1.5 text-muted font-semibold">
+                {t.contact}
+              </span>
+              <div className="px-1.5">
+                <InteractiveEyes size={24} pupilSize={10} gap={8} />
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </div>
   );

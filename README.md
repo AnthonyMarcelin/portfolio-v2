@@ -13,12 +13,18 @@ Je cherche un CDI ou une alternance, sur Bordeaux et alentours ou en remote.
 
 Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Motion · Base UI · Biome
 
+## Langues
+
+Le site existe en français (à la racine : `/`, `/work`, `/projects`) et en anglais (`/en`, `/en/work`, `/en/projects`).
+Les pages vivent dans `app/[lang]/`, et des rewrites dans `next.config.ts` servent la version FR à la racine.
+
 ## Modifier le contenu
 
-Tout le texte est dans `lib/data/` :
+Chaque texte existe en `fr` et en `en` :
 
-- `home.ts` : infos clés, frise, stack, FAQ, projets
-- `work.ts` : parcours de la page Work
+- `lib/i18n.ts` : textes de l'interface (titres, boutons, navigation, métadonnées)
+- `lib/data/home.ts` : infos clés, frise, FAQ, projets
+- `lib/data/work.ts` : parcours de la page Work
 
 Les captures d'écran sont dans `public/work/` (1443×702).
 

@@ -2,10 +2,13 @@
 
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { workExperience } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
 
-export const WorkExperience = () => {
+export const WorkExperience = ({
+  jobs,
+}: {
+  jobs: { company: string; date: string }[];
+}) => {
   const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
@@ -57,7 +60,7 @@ export const WorkExperience = () => {
         </div>
 
         <div className="grid grid-cols-4 w-full gap-0.5 pt-6 z-10 relative">
-          {workExperience.map((job, index) => {
+          {jobs.map((job, index) => {
             const isCurrent = index === 0;
 
             return (

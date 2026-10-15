@@ -5,32 +5,41 @@ import { Container } from "@/components/container";
 import { PageFooter } from "@/components/page-footer";
 import { SubHeadingText, TitleText } from "@/components/ui/text";
 import { work } from "@/lib/data/work";
+import { type Lang, ui } from "@/lib/i18n";
 
-export default function Work() {
-  return <Container gridOne={<WorkGridOne />} gridTwo={<WorkGridTwo />} />;
+export default async function Work({ params }: PageProps<"/[lang]/work">) {
+  const lang = (await params).lang as Lang;
+  return (
+    <Container
+      gridOne={<WorkGridOne lang={lang} />}
+      gridTwo={<WorkGridTwo lang={lang} />}
+    />
+  );
 }
 
-const WorkGridOne = () => {
+const WorkGridOne = ({ lang }: { lang: Lang }) => {
+  const t = ui[lang];
   return (
     <div className="flex xl:h-[calc(100vh-10.5rem)] flex-col justify-between">
       <section></section>
       <section className="flex flex-col gap-6">
-        <TitleText title="Works" />
+        <TitleText title={t.workTitle} />
         <p className="text-wrap text-muted-foreground max-w-3/4 font-sans">
-          {"Grutier → dev. // Chantiers → code."}
+          {t.workIntro1}
           <br />
-          Mon parcours.
+          {t.workIntro2}
         </p>
       </section>
     </div>
   );
 };
 
-const WorkGridTwo = () => {
+const WorkGridTwo = ({ lang }: { lang: Lang }) => {
+  const t = ui[lang];
   return (
     <div className="flex flex-col gap-6">
-      <SubHeadingText text="Parcours professionnel" />
-      {work.map((item) => (
+      <SubHeadingText text={t.workHeading} />
+      {work[lang].map((item) => (
         <div key={item.id} className="flex flex-col gap-4">
           <div className="flex w-full flex-row items-center justify-between gap-4 overflow-hidden">
             <MaybeLink href={item.url}>
@@ -76,7 +85,7 @@ const WorkGridTwo = () => {
           </ul>
         </div>
       ))}
-      <PageFooter />
+      <PageFooter lang={lang} />
     </div>
   );
 };

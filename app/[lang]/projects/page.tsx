@@ -6,35 +6,44 @@ import { Container } from "@/components/container";
 import { PageFooter } from "@/components/page-footer";
 import { TitleText } from "@/components/ui/text";
 import { projectData } from "@/lib/data/home";
+import { type Lang, ui } from "@/lib/i18n";
 import { GitHub } from "@/lib/svg/github";
 
-export default function Projects() {
+export default async function Projects({
+  params,
+}: PageProps<"/[lang]/projects">) {
+  const lang = (await params).lang as Lang;
   return (
-    <Container gridOne={<ProjectsGridOne />} gridTwo={<ProjectsGridTwo />} />
+    <Container
+      gridOne={<ProjectsGridOne lang={lang} />}
+      gridTwo={<ProjectsGridTwo lang={lang} />}
+    />
   );
 }
 
-const ProjectsGridOne = () => {
+const ProjectsGridOne = ({ lang }: { lang: Lang }) => {
+  const t = ui[lang];
   return (
     <div className="flex xl:h-[calc(100vh-10.5rem)] flex-col justify-between">
       <section />
       <section className="flex flex-col gap-6">
-        <TitleText title="Projets" />
+        <TitleText title={t.projectsTitle} />
         <p className="text-wrap text-muted-foreground max-w-3/4 font-sans">
-          Apps mobiles et sites web, du concept jusqu'aux stores.
+          {t.projectsIntro1}
           <br />
-          En équipe ou en freelance.
+          {t.projectsIntro2}
         </p>
-        <PageFooter />
+        <PageFooter lang={lang} />
       </section>
     </div>
   );
 };
 
-const ProjectsGridTwo = () => {
+const ProjectsGridTwo = ({ lang }: { lang: Lang }) => {
+  const t = ui[lang];
   return (
     <div className="flex flex-col gap-6">
-      {projectData.map((item) => (
+      {projectData[lang].map((item) => (
         <div
           key={item.project}
           className="flex flex-col gap-3 rounded-xl border border-border p-4"
@@ -61,7 +70,7 @@ const ProjectsGridTwo = () => {
                 ) : (
                   <>
                     <HugeiconsIcon icon={ArrowUpRight01Icon} size={12} />
-                    Voir le site
+                    {t.visitSite}
                   </>
                 )}
               </Link>

@@ -15,7 +15,7 @@ const cards = [
   { id: 7, src: "/work/MV-02.png" },
 ];
 
-export const WorkCardShuffle = () => {
+export const WorkCardShuffle = ({ motto }: { motto: string }) => {
   const [isHovered, setHovered] = useState<boolean | null>(false);
 
   return (
@@ -64,7 +64,7 @@ export const WorkCardShuffle = () => {
         </motion.div>
       </AnimatePresence>
       <span className="text-primary text-sm z-10 font-mono font-normal uppercase mr-10">
-        À chaque problème sa solution.
+        {motto}
       </span>
     </div>
   );

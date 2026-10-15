@@ -1,0 +1,81 @@
+export const langs = ["fr", "en"] as const;
+export type Lang = (typeof langs)[number];
+
+// FR lives at the root (/, /work, /projects via rewrites), EN under /en.
+export const localePath = (lang: Lang, path: string) =>
+  lang === "fr" ? path : `/en${path === "/" ? "" : path}`;
+
+export const ui = {
+  fr: {
+    metaTitle: "Anthony Marcelin — Développeur web junior",
+    metaDescription:
+      "Concepteur Développeur d'Applications. 18 ans chauffeur-grutier → reconversion dev. Next.js, React, Laravel, NestJS, React Native. CDI ou alternance, Bordeaux et alentours ou remote.",
+    skipToContent: "Aller au contenu",
+    homeLabel: "Accueil — Anthony Marcelin portfolio",
+    contact: "Me contacter",
+    switchLang: "Read in English",
+    nav: { home: "Home", projects: "Projets", work: "Work" },
+    thanks: "Merci pour votre attention !",
+    heroLine1: "18 ans à orchestrer des chantiers.",
+    heroLine2: "Maintenant j'orchestre du code.",
+    mailMe: "M'écrire",
+    stack: "Stack",
+    craneTitle: "Ce que la grue m'a appris",
+    craneLessons: [
+      "Lire le plan avant de lever → Comprendre le besoin avant de coder",
+      "Zéro droit à l'erreur en cabine → Code propre, pas de bâclage",
+      "Coordonner chantier → Git, revues de code, communication",
+    ],
+    faqTitle: "Questions fréquentes",
+    motto: "À chaque problème sa solution.",
+    workTitle: "Works",
+    workIntro1: "Grutier → dev. // Chantiers → code.",
+    workIntro2: "Mon parcours.",
+    workHeading: "Parcours professionnel",
+    projectsTitle: "Projets",
+    projectsIntro1: "Apps mobiles et sites web, du concept jusqu'aux stores.",
+    projectsIntro2: "En équipe ou en freelance.",
+    visitSite: "Voir le site",
+    builtBy: "Construit par",
+    sourceOn: "Code source sur",
+    basedOn: "base :",
+    findMe: "Retrouve-moi sur",
+    and: "et",
+  },
+  en: {
+    metaTitle: "Anthony Marcelin — Junior web developer",
+    metaDescription:
+      "Application designer & developer (French CDA certification). 18 years as a crane operator → career change to dev. Next.js, React, Laravel, NestJS, React Native. Open to full-time or work-study roles, Bordeaux area or remote.",
+    skipToContent: "Skip to content",
+    homeLabel: "Home — Anthony Marcelin portfolio",
+    contact: "Contact me",
+    switchLang: "Lire en français",
+    nav: { home: "Home", projects: "Projects", work: "Work" },
+    thanks: "Thanks for stopping by!",
+    heroLine1: "18 years orchestrating job sites.",
+    heroLine2: "Now I orchestrate code.",
+    mailMe: "Mail me",
+    stack: "Stack",
+    craneTitle: "What the crane taught me",
+    craneLessons: [
+      "Read the plan before lifting → Understand the need before coding",
+      "Zero margin for error in the cab → Clean code, no shortcuts",
+      "Coordinating a job site → Git, code reviews, communication",
+    ],
+    faqTitle: "FAQ",
+    motto: "Every problem has a solution.",
+    workTitle: "Works",
+    workIntro1: "Crane operator → dev. // Job sites → code.",
+    workIntro2: "My journey.",
+    workHeading: "Experience",
+    projectsTitle: "Projects",
+    projectsIntro1: "Mobile apps and websites, from concept to the stores.",
+    projectsIntro2: "In a team or as a freelancer.",
+    visitSite: "Visit site",
+    builtBy: "Built by",
+    sourceOn: "Source code on",
+    basedOn: "based on",
+    findMe: "Find me on",
+    and: "and",
+  },
+} satisfies Record<Lang, unknown>;

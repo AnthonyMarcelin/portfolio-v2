@@ -8,18 +8,26 @@ import { SocialButton } from "@/components/ui/buttons";
 import { SubHeadingText } from "@/components/ui/text";
 import { WorkCardShuffle } from "@/components/work-card-shuffle";
 import { WorkExperience } from "@/components/work-experience";
-import { faqs, homeSection1, stackData } from "@/lib/data/home";
+import { faqs, homeSection1, stackData, workExperience } from "@/lib/data/home";
+import { type Lang, ui } from "@/lib/i18n";
 import { Gmail } from "@/lib/svg/gmail";
 
-export default function Home() {
-  return <Container gridOne={<HomeGridOne />} gridTwo={<HomeGridTwo />} />;
+export default async function Home({ params }: PageProps<"/[lang]">) {
+  const lang = (await params).lang as Lang;
+  return (
+    <Container
+      gridOne={<HomeGridOne lang={lang} />}
+      gridTwo={<HomeGridTwo lang={lang} />}
+    />
+  );
 }
 
-const HomeGridOne = () => {
+const HomeGridOne = ({ lang }: { lang: Lang }) => {
+  const t = ui[lang];
   return (
     <div className="flex xl:h-[calc(100vh-10.5rem)] flex-col relative lg:justify-between gap-10">
       <section className="flex flex-col">
-        {homeSection1.map((item) => (
+        {homeSection1[lang].map((item) => (
           <div
             key={item.title}
             className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4"
@@ -36,30 +44,31 @@ const HomeGridOne = () => {
 
       <section className="flex flex-col gap-4 lg:max-w-3/4">
         <div className="text-5xl font-sans font-semibold tracking-tight text-wrap">
-          18 ans à orchestrer des chantiers.
+          {t.heroLine1}
           <br />
-          Maintenant j'orchestre du code.
+          {t.heroLine2}
         </div>
         <div className="flex gap-2.5 items-center w-full">
           <SocialButton onClickAction={"mailto:anthony.marcelin13@gmail.com"}>
             <Gmail fill="#00000a" height={12} width={12} />
-            <span>Mail Me</span>
+            <span>{t.mailMe}</span>
           </SocialButton>
         </div>
-        <WorkExperience />
+        <WorkExperience jobs={workExperience[lang]} />
       </section>
     </div>
   );
 };
 
-const HomeGridTwo = () => {
+const HomeGridTwo = ({ lang }: { lang: Lang }) => {
+  const t = ui[lang];
   return (
     <div className="flex flex-col gap-12">
-      <WorkCardShuffle />
+      <WorkCardShuffle motto={t.motto} />
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-8">
         <div className="flex flex-col gap-2">
-          <h4 className="text-muted-foreground uppercase text-sm">Stack</h4>
+          <h4 className="text-muted-foreground uppercase text-sm">{t.stack}</h4>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {stackData.map((entry) => (
               <div
@@ -82,44 +91,26 @@ const HomeGridTwo = () => {
       </div>
 
       <div className="flex flex-col gap-4">
-        <SubHeadingText text="Ce que la grue m'a appris" />
+        <SubHeadingText text={t.craneTitle} />
         <div className="flex flex-col gap-2">
-          <div className="font-sans flex gap-4 items-center">
-            <HugeiconsIcon
-              icon={Add01FreeIcons}
-              className="text-muted-foreground"
-            />
-            <span>
-              Lire le plan avant de lever → Comprendre le besoin avant de coder
-            </span>
-          </div>
-          <div className="font-sans flex gap-4 items-center">
-            <HugeiconsIcon
-              icon={Add01FreeIcons}
-              className="text-muted-foreground"
-            />
-            <span>
-              Zéro droit à l'erreur en cabine → Code propre, pas de bâclage
-            </span>
-          </div>
-          <div className="font-sans flex gap-4 items-center">
-            <HugeiconsIcon
-              icon={Add01FreeIcons}
-              className="text-muted-foreground"
-            />
-            <span>
-              Coordonner chantier → Git, revues de code, communication
-            </span>
-          </div>
+          {t.craneLessons.map((lesson) => (
+            <div key={lesson} className="font-sans flex gap-4 items-center">
+              <HugeiconsIcon
+                icon={Add01FreeIcons}
+                className="text-muted-foreground"
+              />
+              <span>{lesson}</span>
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="flex flex-col gap-4">
-        <SubHeadingText text="Questions fréquentes" />
-        <AccordianComponent data={faqs} />
+        <SubHeadingText text={t.faqTitle} />
+        <AccordianComponent data={faqs[lang]} />
       </div>
 
-      <PageFooter />
+      <PageFooter lang={lang} />
     </div>
   );
 };
