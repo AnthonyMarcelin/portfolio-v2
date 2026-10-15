@@ -4,7 +4,7 @@
 
 ## English
 
-Developer portfolio: application designer & developer (French CDA certification, 2025), after 15+ years as a delivery driver and crane truck operator.
+Developer portfolio: application designer & developer (French CDA certification, 2025), after 15+ years as a crane truck driver.
 I'm looking for a full-time or work-study role, in the Bordeaux area or remote.
 
 ### Pages
@@ -49,7 +49,7 @@ Based on [diip3sh](https://github.com/diip3sh/portfolio)'s portfolio, MIT licens
 
 ## Français
 
-Portfolio de développeur : Concepteur Développeur d'Applications (Titre Pro CDA 2025), après plus de 15 ans comme chauffeur-livreur grutier.
+Portfolio de développeur : Concepteur Développeur d'Applications (Titre Pro CDA 2025), après plus de 15 ans comme chauffeur-grutier.
 Je cherche un CDI ou une alternance, sur Bordeaux et alentours ou en remote.
 
 ### Pages

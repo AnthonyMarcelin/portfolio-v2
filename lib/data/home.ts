@@ -16,14 +16,14 @@ export const homeSection1: Record<Lang, Fact[]> = {
     { title: "Disponibilité", value: "CDI · Alternance" },
     { title: "Localisation", value: "Bordeaux et alentours · Remote" },
     { title: "Formation", value: "Titre Pro CDA 2025" },
-    { title: "Expérience", value: "15+ ans transport → Dev" },
+    { title: "Expérience", value: "15+ ans chauffeur-grutier → Dev" },
     { title: "Rôle", value: "Concepteur Développeur d'Applications" },
   ],
   en: [
     { title: "Availability", value: "Full-time · Work-study" },
     { title: "Location", value: "Bordeaux area · Remote" },
     { title: "Education", value: "CDA certification 2025" },
-    { title: "Experience", value: "15+ yrs transport → Dev" },
+    { title: "Experience", value: "15+ yrs crane truck driver → Dev" },
     { title: "Role", value: "Application designer & developer" },
   ],
 };
@@ -33,13 +33,13 @@ export const workExperience: Record<Lang, Job[]> = {
     { company: "Forge Digitale Solutions", date: "2026 →" },
     { company: "Go Sport Now", date: "2025 - 2026" },
     { company: "Titre Pro CDA", date: "2024 - 2025" },
-    { company: "Chauffeur-livreur", date: "→ 2024" },
+    { company: "Chauffeur-grutier", date: "→ 2024" },
   ],
   en: [
     { company: "Forge Digitale Solutions", date: "2026 →" },
     { company: "Go Sport Now", date: "2025 - 2026" },
     { company: "CDA certification", date: "2024 - 2025" },
-    { company: "Delivery driver", date: "→ 2024" },
+    { company: "Crane truck driver", date: "→ 2024" },
   ],
 };
 
