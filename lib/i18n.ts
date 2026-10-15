@@ -20,6 +20,9 @@ export const ui = {
     heroLine2: "Maintenant j'orchestre du code.",
     mailMe: "M'écrire",
     stack: "Stack",
+    aiTitle: "IA",
+    aiText:
+      "Claude Code et Cursor : workflows agentiques, du ticket Linear à la PR.",
     craneTitle: "Ce que la grue m'a appris",
     craneLessons: [
       "Lire le plan avant de lever → Comprendre le besoin avant de coder",
@@ -56,6 +59,9 @@ export const ui = {
     heroLine2: "Now I orchestrate code.",
     mailMe: "Mail me",
     stack: "Stack",
+    aiTitle: "AI",
+    aiText:
+      "Claude Code and Cursor: agentic workflows, from Linear ticket to pull request.",
     craneTitle: "What the crane taught me",
     craneLessons: [
       "Read the plan before lifting → Understand the need before coding",

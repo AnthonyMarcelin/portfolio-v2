@@ -84,6 +84,11 @@ export const faqs: Record<Lang, Faq[]> = {
         "Go Sport Now, une app de sport conçue à trois, de la maquette jusqu'aux stores. Ça m'a forcé à penser conception avant de coder.",
     },
     {
+      question: "Tu utilises l'IA ?",
+      answer:
+        "Oui. Claude Code et Cursor, avec des workflows agentiques : du ticket Linear jusqu'à la PR.",
+    },
+    {
       question: "Ta devise ?",
       answer:
         "À chaque problème sa solution. Quand on en a pas, on se débrouille à en trouver une.",
@@ -109,6 +114,11 @@ export const faqs: Record<Lang, Faq[]> = {
       question: "Your first big project?",
       answer:
         "Go Sport Now, a sports app built by a team of three, from mockups to the app stores. It forced me to think design before code.",
+    },
+    {
+      question: "Do you use AI?",
+      answer:
+        "Yes. Claude Code and Cursor, with agentic workflows: from the Linear ticket to the pull request.",
     },
     {
       question: "Your motto?",

@@ -88,6 +88,12 @@ const HomeGridTwo = ({ lang }: { lang: Lang }) => {
             ))}
           </div>
         </div>
+        <div className="flex flex-col gap-2">
+          <h4 className="text-muted-foreground uppercase text-sm">
+            {t.aiTitle}
+          </h4>
+          <p className="font-sans text-sm">{t.aiText}</p>
+        </div>
       </div>
 
       <div className="flex flex-col gap-4">
