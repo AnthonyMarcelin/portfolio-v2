@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Background } from "@/components/background";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import { getLang, langs, ui } from "@/lib/i18n";
+import { getLang, langs, localePath, ui } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
@@ -39,15 +39,14 @@ export async function generateMetadata({
     openGraph: {
       title: t.metaTitle,
       description: t.metaDescription,
-      url: "https://forgedigitalesolutions.com",
+      url: localePath(lang, "/"),
       siteName: "Anthony Marcelin Portfolio",
-      images: ["/og.png"],
       locale: lang === "en" ? "en_US" : "fr_FR",
       type: "website",
     },
+    // og:image comes from ./opengraph-image.tsx; X falls back to it.
     twitter: {
       card: "summary_large_image",
-      images: ["/og.png"],
     },
   };
 }
