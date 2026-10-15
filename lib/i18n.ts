@@ -16,7 +16,7 @@ export const localePath = (lang: Lang, path: string) =>
 
 export const ui = {
   fr: {
-    metaTitle: "Anthony Marcelin, développeur web junior",
+    metaTitle: "Anthony Marcelin, développeur fullstack",
     metaDescription:
       "Concepteur Développeur d'Applications. Plus de 15 ans chauffeur-grutier → reconversion dev. Next.js, React, Laravel, NestJS, React Native. CDI ou alternance, Bordeaux et alentours ou remote.",
     skipToContent: "Aller au contenu",
@@ -65,7 +65,7 @@ export const ui = {
     and: "et",
   },
   en: {
-    metaTitle: "Anthony Marcelin, junior web developer",
+    metaTitle: "Anthony Marcelin, full-stack developer",
     metaDescription:
       "Application designer & developer (French CDA certification). 15+ years as a crane truck driver → career change to dev. Next.js, React, Laravel, NestJS, React Native. Open to full-time or work-study roles, Bordeaux area or remote.",
     skipToContent: "Skip to content",

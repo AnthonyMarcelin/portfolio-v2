@@ -20,7 +20,7 @@ export async function generateMetadata({
     keywords: [
       "Anthony Marcelin",
       "développeur web",
-      "junior développeur",
+      "développeur fullstack",
       "web developer",
       "Next.js",
       "React",

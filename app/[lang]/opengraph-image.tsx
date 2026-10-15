@@ -8,8 +8,8 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const roles = {
-  fr: "Développeur web junior",
-  en: "Junior web developer",
+  fr: "Développeur fullstack",
+  en: "Full-stack developer",
 };
 
 export default async function Image({
