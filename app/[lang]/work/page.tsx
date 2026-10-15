@@ -1,3 +1,5 @@
+import { Briefcase09Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -5,10 +7,10 @@ import { Container } from "@/components/container";
 import { PageFooter } from "@/components/page-footer";
 import { SubHeadingText, TitleText } from "@/components/ui/text";
 import { work } from "@/lib/data/work";
-import { type Lang, ui } from "@/lib/i18n";
+import { getLang, type Lang, ui } from "@/lib/i18n";
 
 export default async function Work({ params }: PageProps<"/[lang]/work">) {
-  const lang = (await params).lang as Lang;
+  const lang = await getLang(params);
   return (
     <Container
       gridOne={<WorkGridOne lang={lang} />}
@@ -44,15 +46,22 @@ const WorkGridTwo = ({ lang }: { lang: Lang }) => {
           <div className="flex w-full flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4">
             <MaybeLink href={item.url}>
               <div className="flex flex-row gap-2">
-                <Image
-                  src={item.image}
-                  alt={item.company}
-                  width={36}
-                  height={36}
-                  className="object-contain p-2 grayscale"
-                  loading="lazy"
-                  unoptimized
-                />
+                {item.image ? (
+                  <Image
+                    src={item.image}
+                    alt={item.company}
+                    width={36}
+                    height={36}
+                    className="object-contain p-2 grayscale"
+                    loading="lazy"
+                    unoptimized
+                  />
+                ) : (
+                  <HugeiconsIcon
+                    icon={Briefcase09Icon}
+                    className="size-9 shrink-0 p-2 text-muted-foreground"
+                  />
+                )}
                 <div className="flex flex-col justify-between">
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium">
                     <span className="uppercase">{item.company}</span>
@@ -70,7 +79,9 @@ const WorkGridTwo = ({ lang }: { lang: Lang }) => {
             </MaybeLink>
             <div className="flex flex-wrap gap-x-3 pl-11 sm:pl-0 sm:min-w-24 sm:flex-col sm:justify-between whitespace-nowrap sm:text-right text-xs">
               <div className="text-muted-foreground">{item.date}</div>
-              <div className="text-muted-foreground">{item.location}</div>
+              {item.location && (
+                <div className="text-muted-foreground">{item.location}</div>
+              )}
             </div>
           </div>
           <ul className="px-4">

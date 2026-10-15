@@ -2,10 +2,8 @@ import { Dithering } from "@paper-design/shaders-react";
 import type { Metadata } from "next";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import { type Lang, langs, ui } from "@/lib/i18n";
+import { getLang, langs, ui } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-
-export const dynamicParams = false;
 
 export function generateStaticParams() {
   return langs.map((lang) => ({ lang }));
@@ -14,7 +12,8 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: LayoutProps<"/[lang]">): Promise<Metadata> {
-  const t = ui[(await params).lang as Lang];
+  const lang = await getLang(params);
+  const t = ui[lang];
   return {
     title: { absolute: t.metaTitle, template: "%s | Anthony Marcelin" },
     description: t.metaDescription,
@@ -43,7 +42,7 @@ export async function generateMetadata({
       url: "https://forgedigitalesolutions.com",
       siteName: "Anthony Marcelin Portfolio",
       images: ["/og.png"],
-      locale: (await params).lang === "en" ? "en_US" : "fr_FR",
+      locale: lang === "en" ? "en_US" : "fr_FR",
       type: "website",
     },
     twitter: {
@@ -57,7 +56,9 @@ export default async function LangLayout({
   children,
   params,
 }: LayoutProps<"/[lang]">) {
-  const lang = (await params).lang as Lang;
+  // Unknown segments (/robots.txt, /wp-login.php…) 404 via getLang instead of
+  // dynamicParams = false, which logs a NoFallbackError on every miss.
+  const lang = await getLang(params);
   return (
     <div lang={lang}>
       <a

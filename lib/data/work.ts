@@ -6,9 +6,9 @@ type WorkItem = {
   date: string;
   title: string;
   badge: string;
-  location: string;
+  location?: string;
   url?: string;
-  image: string;
+  image?: string;
   description: string[];
 };
 
@@ -47,6 +47,17 @@ export const work: Record<Lang, WorkItem[]> = {
       ],
     },
     {
+      id: "2.5",
+      company: "HRnov.ai",
+      date: "Juil. - Août 2025",
+      title: "Développeur fullstack, stage",
+      badge: "Équipe de 6",
+      description: [
+        "Logiciel de recrutement, équipe de 6 développeurs en méthode agile.",
+        "API Node.js et NestJS, front-end React.",
+      ],
+    },
+    {
       id: "3",
       company: "Formation Titre Pro CDA",
       date: "Nov 2024 - Sept 2025",
@@ -61,16 +72,16 @@ export const work: Record<Lang, WorkItem[]> = {
     },
     {
       id: "4",
-      company: "Chauffeur-grutier",
-      date: "2006 - 2024",
-      title: "18 ans de précision absolue",
-      badge: "Compétences transversales",
-      location: "Chantiers France / Europe",
+      company: "TR Express · AMC Tout Faire Matériaux",
+      date: "→ 2024",
+      title: "Chauffeur-livreur grutier, magasinier cariste",
+      badge: "Plus de 15 ans",
+      location: "France / Europe",
       image: "/work/crane-logo.png",
       description: [
-        "Transport urgent dans toute l'Europe, gestion du temps, organisation.",
-        "Gestion charges lourdes, coordination équipe chantier, zéro droit à l'erreur.",
-        "Rigueur, anticipation risques, satisfaction client, résolution problèmes.",
+        "TR Express : chauffeur, transport urgent dans toute l'Europe, gestion du temps.",
+        "AMC Tout Faire Matériaux : livraison en camion-grue sur chantier, magasinier cariste.",
+        "Relation client, gestion des priorités sous contrainte de délais, zéro droit à l'erreur.",
         "Réflexes directement transférables au développement : vérifier avant de coder.",
       ],
     },
@@ -109,6 +120,17 @@ export const work: Record<Lang, WorkItem[]> = {
       ],
     },
     {
+      id: "2.5",
+      company: "HRnov.ai",
+      date: "July - Aug 2025",
+      title: "Full-stack developer, internship",
+      badge: "Team of 6",
+      description: [
+        "Recruitment software, team of 6 developers working agile.",
+        "Node.js and NestJS API, React front end.",
+      ],
+    },
+    {
       id: "3",
       company: "CDA certification",
       date: "Nov 2024 - Sept 2025",
@@ -123,16 +145,17 @@ export const work: Record<Lang, WorkItem[]> = {
     },
     {
       id: "4",
-      company: "Crane operator",
-      date: "2006 - 2024",
-      title: "18 years of absolute precision",
-      badge: "Transferable skills",
-      location: "Job sites France / Europe",
+      company: "TR Express · AMC Tout Faire Matériaux",
+      date: "→ 2024",
+      title:
+        "Delivery driver, crane truck operator, warehouse forklift operator",
+      badge: "15+ years",
+      location: "France / Europe",
       image: "/work/crane-logo.png",
       description: [
-        "Urgent transport across Europe, time management, organization.",
-        "Heavy loads, job-site team coordination, zero margin for error.",
-        "Rigor, risk anticipation, customer satisfaction, problem solving.",
+        "TR Express: driver, urgent transport across Europe, time management.",
+        "AMC Tout Faire Matériaux: crane truck deliveries to job sites, warehouse and forklift work.",
+        "Customer relations, prioritizing under tight deadlines, zero margin for error.",
         "Reflexes that carry straight over to development: check before you code.",
       ],
     },

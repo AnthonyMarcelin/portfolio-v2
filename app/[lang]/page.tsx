@@ -1,4 +1,11 @@
-import { Add01FreeIcons } from "@hugeicons/core-free-icons";
+import {
+  Add01FreeIcons,
+  AiProgrammingIcon,
+  GitPullRequestIcon,
+  Idea01Icon,
+  KanbanIcon,
+  Rocket01Icon,
+} from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
 import { Container } from "@/components/container";
@@ -9,11 +16,11 @@ import { SubHeadingText } from "@/components/ui/text";
 import { WorkCardShuffle } from "@/components/work-card-shuffle";
 import { WorkExperience } from "@/components/work-experience";
 import { faqs, homeSection1, stackData, workExperience } from "@/lib/data/home";
-import { type Lang, ui } from "@/lib/i18n";
+import { getLang, type Lang, ui } from "@/lib/i18n";
 import { Gmail } from "@/lib/svg/gmail";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
-  const lang = (await params).lang as Lang;
+  const lang = await getLang(params);
   return (
     <Container
       gridOne={<HomeGridOne lang={lang} />}
@@ -66,9 +73,25 @@ const HomeGridTwo = ({ lang }: { lang: Lang }) => {
     <div className="flex flex-col gap-12">
       <WorkCardShuffle motto={t.motto} />
 
+      <div className="flex flex-col gap-4">
+        <SubHeadingText text={t.workflowTitle} />
+        <div className="flex flex-col gap-2">
+          {t.workflowSteps.map((step, i) => (
+            <div key={step} className="font-sans flex gap-4 items-center">
+              <HugeiconsIcon
+                icon={workflowIcons[i]}
+                className="text-primary shrink-0"
+              />
+              <span>{step}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-8">
         <div className="flex flex-col gap-2">
           <h4 className="text-muted-foreground uppercase text-sm">{t.stack}</h4>
+          <p className="font-sans text-sm">{t.stackIntro}</p>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {stackData.map((entry) => (
               <div
@@ -87,12 +110,6 @@ const HomeGridTwo = ({ lang }: { lang: Lang }) => {
               </div>
             ))}
           </div>
-        </div>
-        <div className="flex flex-col gap-2">
-          <h4 className="text-muted-foreground uppercase text-sm">
-            {t.aiTitle}
-          </h4>
-          <p className="font-sans text-sm">{t.aiText}</p>
         </div>
       </div>
 
@@ -120,3 +137,12 @@ const HomeGridTwo = ({ lang }: { lang: Lang }) => {
     </div>
   );
 };
+
+// Same order as ui[lang].workflowSteps.
+const workflowIcons = [
+  Idea01Icon,
+  KanbanIcon,
+  AiProgrammingIcon,
+  GitPullRequestIcon,
+  Rocket01Icon,
+];

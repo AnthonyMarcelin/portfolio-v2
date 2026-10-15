@@ -16,14 +16,14 @@ export const homeSection1: Record<Lang, Fact[]> = {
     { title: "Disponibilité", value: "CDI · Alternance" },
     { title: "Localisation", value: "Bordeaux et alentours · Remote" },
     { title: "Formation", value: "Titre Pro CDA 2025" },
-    { title: "Expérience", value: "18 ans grutier → Dev" },
+    { title: "Expérience", value: "15+ ans transport → Dev" },
     { title: "Rôle", value: "Concepteur Développeur d'Applications" },
   ],
   en: [
     { title: "Availability", value: "Full-time · Work-study" },
     { title: "Location", value: "Bordeaux area · Remote" },
     { title: "Education", value: "CDA certification 2025" },
-    { title: "Experience", value: "18 yrs crane operator → Dev" },
+    { title: "Experience", value: "15+ yrs transport → Dev" },
     { title: "Role", value: "Application designer & developer" },
   ],
 };
@@ -33,38 +33,29 @@ export const workExperience: Record<Lang, Job[]> = {
     { company: "Forge Digitale Solutions", date: "2026 →" },
     { company: "Go Sport Now", date: "2025 - 2026" },
     { company: "Titre Pro CDA", date: "2024 - 2025" },
-    { company: "Chauffeur grutier", date: "2006 - 2024" },
+    { company: "Chauffeur-livreur", date: "→ 2024" },
   ],
   en: [
     { company: "Forge Digitale Solutions", date: "2026 →" },
     { company: "Go Sport Now", date: "2025 - 2026" },
     { company: "CDA certification", date: "2024 - 2025" },
-    { company: "Crane operator", date: "2006 - 2024" },
+    { company: "Delivery driver", date: "→ 2024" },
   ],
 };
 
 export const stackData = [
-  // Core
-  { label: "Next.js", logo: "/nextjs.svg" },
   { label: "TypeScript", logo: "/typescript.svg" },
   { label: "React", logo: "/react.svg" },
-  { label: "JavaScript", logo: "/javascript.svg" },
-  // Backend
-  { label: "Laravel", logo: "/laravel.svg" },
+  { label: "Next.js", logo: "/nextjs.svg" },
   { label: "NestJS", logo: "/nestjs.svg" },
-  { label: "NodeJS", logo: "/nodejs.svg" },
-  // Tools
-  { label: "Tailwind", logo: "/tailwindcss.svg" },
-  { label: "PostgreSQL", logo: "/postgresql.svg" },
-  { label: "Git", logo: "/git.svg" },
+  { label: "Laravel", logo: "/laravel.svg" },
   { label: "Docker", logo: "/docker.svg" },
-  { label: "Redis", logo: "/redis.svg" },
 ];
 
 export const faqs: Record<Lang, Faq[]> = {
   fr: [
     {
-      question: "Ce que 18 ans de grue m'ont appris ?",
+      question: "Ce que la route et la grue t'ont appris ?",
       answer:
         "La rigueur absolue. Une charge mal calculée = chantier arrêté. Le code, c'est pareil : on réfléchit avant d'agir.",
     },
@@ -96,7 +87,7 @@ export const faqs: Record<Lang, Faq[]> = {
   ],
   en: [
     {
-      question: "What did 18 years on cranes teach you?",
+      question: "What did the road and the crane teach you?",
       answer:
         "Absolute rigor. A miscalculated load means a stopped job site. Code is the same: think before you act.",
     },

@@ -6,13 +6,13 @@ import { Container } from "@/components/container";
 import { PageFooter } from "@/components/page-footer";
 import { TitleText } from "@/components/ui/text";
 import { projectData } from "@/lib/data/home";
-import { type Lang, ui } from "@/lib/i18n";
+import { getLang, type Lang, ui } from "@/lib/i18n";
 import { GitHub } from "@/lib/svg/github";
 
 export default async function Projects({
   params,
 }: PageProps<"/[lang]/projects">) {
-  const lang = (await params).lang as Lang;
+  const lang = await getLang(params);
   return (
     <Container
       gridOne={<ProjectsGridOne lang={lang} />}
