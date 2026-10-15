@@ -23,6 +23,10 @@ export const ui = {
     homeLabel: "Accueil du portfolio d'Anthony Marcelin",
     contact: "Me contacter",
     switchLang: "Read in English",
+    themeLabels: ["Passer en mode sombre", "Passer en mode clair"] as [
+      string,
+      string,
+    ],
     nav: { home: "Home", projects: "Projets", work: "Work" },
     thanks: "Merci pour votre attention !",
     heroLine1: "Plus de 15 ans à livrer des chantiers, grue en main.",
@@ -68,6 +72,10 @@ export const ui = {
     homeLabel: "Anthony Marcelin portfolio home",
     contact: "Contact me",
     switchLang: "Lire en français",
+    themeLabels: ["Switch to dark mode", "Switch to light mode"] as [
+      string,
+      string,
+    ],
     nav: { home: "Home", projects: "Projects", work: "Work" },
     thanks: "Thanks for stopping by!",
     heroLine1: "15+ years delivering to job sites at the crane controls.",

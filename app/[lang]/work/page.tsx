@@ -66,7 +66,7 @@ const WorkGridTwo = ({ lang }: { lang: Lang }) => {
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium">
                     <span className="uppercase">{item.company}</span>
                     {item.badge && (
-                      <span className="select-none rounded-full bg-[#F2F2F3] px-2 py-0.5 text-[10px] text-[#18181B] border border-[#EEEFF0]">
+                      <span className="select-none rounded-full bg-[#F2F2F3] px-2 py-0.5 text-[10px] text-[#18181B] border border-[#EEEFF0] dark:bg-secondary dark:text-foreground dark:border-border">
                         {item.badge}
                       </span>
                     )}

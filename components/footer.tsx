@@ -57,7 +57,7 @@ export default function Footer({ lang }: { lang: Lang }) {
                 ref={activeTab === tab.name ? activeTabElementRef : null}
                 data-tab={tab.name}
                 onClick={() => setActiveTab(tab.name)}
-                className="px-3 py-1.5 flex items-center gap-2 text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md touch-manipulation"
+                className="px-3 py-1.5 flex items-center gap-2 text-black dark:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md touch-manipulation"
               >
                 {tab.icon}
                 {tab.name}

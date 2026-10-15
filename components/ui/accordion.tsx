@@ -46,12 +46,12 @@ export const AccordianComponent = ({ data }: { data: DataProp[] }) => {
                 />
               }
               key={item.question}
-              className="data-open:bg-primary rounded-[14px] bg-[#e5e5e5] data-open:text-secondary"
+              className="data-open:bg-primary rounded-[14px] bg-[#e5e5e5] dark:bg-secondary data-open:text-secondary dark:data-open:text-white"
             >
               <Accordion.Header className="">
                 <Accordion.Trigger className="group relative flex w-full items-start justify-between gap-4 py-2 pr-1 pl-3 text-left font-medium focus-visible:z-1 focus-visible:outline focus-visible:outline-primary">
                   {item?.question}
-                  <div className="border border-black p-1.5 flex items-center justify-center rounded-full mr-2 group-data-panel-open:bg-secondary group-data-panel-open:border-none">
+                  <div className="border border-black dark:border-foreground p-1.5 flex items-center justify-center rounded-full mr-2 group-data-panel-open:bg-secondary group-data-panel-open:border-none">
                     <HugeiconsIcon
                       icon={ArrowRight02Icon}
                       className=" size-4 shrink-0 transition-all ease-out group-data-panel-open:scale-110 group-data-panel-open:rotate-45 group-data-panel-open:text-primary"

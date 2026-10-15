@@ -12,6 +12,7 @@ export const TitleText = ({
 }) => {
   return (
     <LineShadowText
+      shadowColor="var(--foreground)"
       className={cn(
         "font-mono uppercase font-semibold tracking-tighter text-wrap leading-[7vw]",
         className,

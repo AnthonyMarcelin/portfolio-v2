@@ -34,6 +34,7 @@ export const PageFooter = ({ lang }: { lang: Lang }) => {
         >
           <LinkedInIcon
             fill="#00000a"
+            className="dark:fill-foreground"
             height={16}
             width={16}
             aria-label="LinkedIn"
@@ -45,7 +46,13 @@ export const PageFooter = ({ lang }: { lang: Lang }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHub fill="#00000a" height={16} width={16} aria-label="GitHub" />
+          <GitHub
+            fill="#00000a"
+            className="dark:fill-foreground"
+            height={16}
+            width={16}
+            aria-label="GitHub"
+          />
         </Link>
       </div>
     </div>

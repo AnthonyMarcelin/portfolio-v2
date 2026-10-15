@@ -54,7 +54,7 @@ function Eye({
   return (
     <div
       ref={eyeRef}
-      className={`relative bg-background rounded-full overflow-hidden ${className}`}
+      className={`relative bg-white rounded-full overflow-hidden ${className}`}
       style={{
         width: size,
         height: size,
@@ -125,9 +125,13 @@ export function InteractiveEyes({
 
   return (
     <BlinkContext.Provider value={{ isBlinking }}>
-      <div className={`flex items-center ${className}`} style={{ gap }}>
+      <div
+        className={`relative flex items-center ${className}`}
+        style={{ gap }}
+      >
         <Eye size={size} pupilSize={pupilSize} />
         <Eye size={size} pupilSize={pupilSize} />
+        <Sunglasses size={size} gap={gap} />
       </div>
     </BlinkContext.Provider>
   );
@@ -135,3 +139,45 @@ export function InteractiveEyes({
 
 // Keep single eye export for backward compatibility
 export { Eye as InteractiveEye };
+
+// Light mode wears shades; they lift off and fade out in dark mode.
+function Sunglasses({ size, gap }: { size: number; gap: number }) {
+  const width = size * 2 + gap;
+  const lensHeight = size * 0.62;
+  const top = size * 0.18;
+  return (
+    <svg
+      aria-hidden="true"
+      width={width + 4}
+      height={size}
+      viewBox={`-2 0 ${width + 4} ${size}`}
+      className="pointer-events-none absolute -left-0.5 top-0 transition-[opacity,transform] duration-500 ease-out dark:-translate-y-3 dark:rotate-[-8deg] dark:opacity-0 motion-reduce:transition-none"
+    >
+      {[0, size + gap].map((x) => (
+        <g key={x}>
+          <rect
+            x={x - 1}
+            y={top}
+            width={size + 2}
+            height={lensHeight}
+            rx={size * 0.3}
+            fill="#111"
+          />
+          <path
+            d={`M${x + size * 0.25} ${top + lensHeight * 0.65} L${x + size * 0.5} ${top + lensHeight * 0.2}`}
+            stroke="white"
+            strokeOpacity={0.45}
+            strokeWidth={1.5}
+            strokeLinecap="round"
+          />
+        </g>
+      ))}
+      <path
+        d={`M-1 ${top + 1.5} H${width + 1}`}
+        stroke="#111"
+        strokeWidth={2.5}
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}

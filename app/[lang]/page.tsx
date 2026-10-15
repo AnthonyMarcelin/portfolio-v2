@@ -103,6 +103,7 @@ const HomeGridTwo = ({ lang }: { lang: Lang }) => {
                   alt={entry.label}
                   width={16}
                   height={16}
+                  className={entry.label === "Next.js" ? "dark:invert" : ""}
                 />
                 <span className="uppercase font-medium text-sm">
                   {entry.label}

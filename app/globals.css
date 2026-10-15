@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@toolwind/corner-shape";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.2686 0 0);
@@ -57,6 +59,37 @@
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.18 0 0);
+  --foreground: oklch(0.93 0 0);
+  --card: oklch(0.21 0 0);
+  --card-foreground: oklch(0.93 0 0);
+  --popover: oklch(0.21 0 0);
+  --popover-foreground: oklch(0.93 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.26 0.005 264);
+  --secondary-foreground: oklch(0.82 0.01 264);
+  --muted: oklch(0.25 0.004 264);
+  --muted-foreground: oklch(0.7 0.015 264);
+  --accent: oklch(0.27 0.03 60);
+  --accent-foreground: oklch(0.85 0.1 60);
+  --border: oklch(0.3 0.005 264);
+  --input: oklch(0.3 0.005 264);
+}
+
+/* Theme toggle: the new snapshot is revealed by a circle (see components/theme.tsx). */
+/* biome-ignore lint/correctness/noUnknownTypeSelector: "root" is the view transition name */
+::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+/* biome-ignore lint/correctness/noUnknownTypeSelector: "root" is the view transition name */
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
 @theme inline {
@@ -130,6 +163,11 @@
 
 body {
   letter-spacing: var(--tracking-normal);
+}
+
+.dark body {
+  background: var(--background);
+  color: var(--foreground);
 }
 
 @keyframes accordion-down {

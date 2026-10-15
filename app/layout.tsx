@@ -34,7 +34,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        {/* Applies the saved or system theme before first paint (no flash). */}
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static inline script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}`,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${jetBrainsMono.variable} antialiased font-mono`}
       >

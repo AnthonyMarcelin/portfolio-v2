@@ -1,5 +1,5 @@
-import { Dithering } from "@paper-design/shaders-react";
 import type { Metadata } from "next";
+import { Background } from "@/components/background";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { getLang, langs, ui } from "@/lib/i18n";
@@ -68,21 +68,12 @@ export default async function LangLayout({
         {ui[lang].skipToContent}
       </a>
       <div className="flex flex-col min-h-screen px-3">
-        <Dithering
-          colorBack="#e5e5e5"
-          colorFront="#E85D04"
-          shape="wave"
-          type="8x8"
-          size={2.2}
-          speed={0.86}
-          scale={0.68}
-          className="absolute top-0 left-0 w-full h-screen -z-10 opacity-20 dithering-effect"
-        />
+        <Background />
         <Navbar lang={lang} />
         <div
           id="main-content"
           className={cn(
-            "bg-background overflow-auto rounded-[25px] corner-squircle",
+            "bg-background overflow-auto rounded-[25px] corner-squircle dark:ring-1 dark:ring-border",
             "shadow-[0px_4px_16px_rgba(17,17,26,0.1),0px_8px_24px_rgba(17,17,26,0.1),0px_16px_56px_rgba(17,17,26,0.1)]",
           )}
           style={{ height: `calc(100dvh - 120px)` }}
