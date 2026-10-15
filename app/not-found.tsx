@@ -18,9 +18,9 @@ export default function NotFound() {
         </Link>
         .{" "}
         <span lang="en" className="block text-muted-foreground text-lg mt-2">
-          Not found —{" "}
+          Not found.{" "}
           <Link href="/en" className="underline">
-            back home
+            Back home
           </Link>
           .
         </span>

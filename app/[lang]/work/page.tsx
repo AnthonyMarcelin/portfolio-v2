@@ -41,7 +41,7 @@ const WorkGridTwo = ({ lang }: { lang: Lang }) => {
       <SubHeadingText text={t.workHeading} />
       {work[lang].map((item) => (
         <div key={item.id} className="flex flex-col gap-4">
-          <div className="flex w-full flex-row items-center justify-between gap-4 overflow-hidden">
+          <div className="flex w-full flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4">
             <MaybeLink href={item.url}>
               <div className="flex flex-row gap-2">
                 <Image
@@ -53,8 +53,8 @@ const WorkGridTwo = ({ lang }: { lang: Lang }) => {
                   loading="lazy"
                   unoptimized
                 />
-                <div className="flex flex-col justify-between whitespace-nowrap">
-                  <div className="space-x-2 text-sm font-medium">
+                <div className="flex flex-col justify-between">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium">
                     <span className="uppercase">{item.company}</span>
                     {item.badge && (
                       <span className="select-none rounded-full bg-[#F2F2F3] px-2 py-0.5 text-[10px] text-[#18181B] border border-[#EEEFF0]">
@@ -68,7 +68,7 @@ const WorkGridTwo = ({ lang }: { lang: Lang }) => {
                 </div>
               </div>
             </MaybeLink>
-            <div className="flex min-w-24 flex-col justify-between whitespace-nowrap text-right text-xs">
+            <div className="flex flex-wrap gap-x-3 pl-11 sm:pl-0 sm:min-w-24 sm:flex-col sm:justify-between whitespace-nowrap sm:text-right text-xs">
               <div className="text-muted-foreground">{item.date}</div>
               <div className="text-muted-foreground">{item.location}</div>
             </div>

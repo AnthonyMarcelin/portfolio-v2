@@ -55,7 +55,7 @@ export const work: Record<Lang, WorkItem[]> = {
       location: "France",
       image: "/work/oclock-logo.png",
       description: [
-        "SkillSwap — React + MVC + PostgreSQL (projet de fin de formation)",
+        "SkillSwap : React + MVC + PostgreSQL (projet de fin de formation)",
         "Apprentissage intensif fullstack : frontend, backend, mobile.",
       ],
     },
@@ -117,7 +117,7 @@ export const work: Record<Lang, WorkItem[]> = {
       location: "France",
       image: "/work/oclock-logo.png",
       description: [
-        "SkillSwap — React + MVC + PostgreSQL (final project)",
+        "SkillSwap: React + MVC + PostgreSQL (final project)",
         "Intensive full-stack training: frontend, backend, mobile.",
       ],
     },

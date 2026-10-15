@@ -30,15 +30,15 @@ export const homeSection1: Record<Lang, Fact[]> = {
 
 export const workExperience: Record<Lang, Job[]> = {
   fr: [
-    { company: "Forge Digitale", date: "Avr 2026 →" },
-    { company: "Go Sport Now", date: "Sept 2025 - Avr 2026" },
-    { company: "Titre Pro CDA", date: "Nov 2024 - Sept 2025" },
+    { company: "Forge Digitale Solutions", date: "2026 →" },
+    { company: "Go Sport Now", date: "2025 - 2026" },
+    { company: "Titre Pro CDA", date: "2024 - 2025" },
     { company: "Chauffeur grutier", date: "2006 - 2024" },
   ],
   en: [
-    { company: "Forge Digitale", date: "Apr 2026 →" },
-    { company: "Go Sport Now", date: "Sept 2025 - Apr 2026" },
-    { company: "CDA certification", date: "Nov 2024 - Sept 2025" },
+    { company: "Forge Digitale Solutions", date: "2026 →" },
+    { company: "Go Sport Now", date: "2025 - 2026" },
+    { company: "CDA certification", date: "2024 - 2025" },
     { company: "Crane operator", date: "2006 - 2024" },
   ],
 };
@@ -66,7 +66,7 @@ export const faqs: Record<Lang, Faq[]> = {
     {
       question: "Ce que 18 ans de grue m'ont appris ?",
       answer:
-        "La rigueur absolue. Une charge mal calculée = chantier arrêté. Le code c'est pareil — on réfléchit avant d'agir.",
+        "La rigueur absolue. Une charge mal calculée = chantier arrêté. Le code, c'est pareil : on réfléchit avant d'agir.",
     },
     {
       question: "Comment tu travailles en équipe ?",
@@ -76,12 +76,12 @@ export const faqs: Record<Lang, Faq[]> = {
     {
       question: "CDI ou alternance ?",
       answer:
-        "Les deux. Je cherche une équipe sur Bordeaux et alentours, ou en remote. En attendant, je livre des projets avec Forge Digitale.",
+        "Les deux. Je cherche une équipe sur Bordeaux et alentours, ou en remote. En attendant, je livre des projets avec Forge Digitale Solutions.",
     },
     {
       question: "Ton premier gros projet ?",
       answer:
-        "Go Sport Now — une app de sport conçue à trois, de la maquette jusqu'aux stores. Ça m'a forcé à penser conception avant de coder.",
+        "Go Sport Now, une app de sport conçue à trois, de la maquette jusqu'aux stores. Ça m'a forcé à penser conception avant de coder.",
     },
     {
       question: "Ta devise ?",
@@ -93,7 +93,7 @@ export const faqs: Record<Lang, Faq[]> = {
     {
       question: "What did 18 years on cranes teach you?",
       answer:
-        "Absolute rigor. A miscalculated load means a stopped job site. Code is the same — think before you act.",
+        "Absolute rigor. A miscalculated load means a stopped job site. Code is the same: think before you act.",
     },
     {
       question: "How do you work in a team?",
@@ -103,12 +103,12 @@ export const faqs: Record<Lang, Faq[]> = {
     {
       question: "Full-time or work-study?",
       answer:
-        "Both. I'm looking for a team in the Bordeaux area, or remote. Meanwhile, I ship projects with Forge Digitale.",
+        "Both. I'm looking for a team in the Bordeaux area, or remote. Meanwhile, I ship projects with Forge Digitale Solutions.",
     },
     {
       question: "Your first big project?",
       answer:
-        "Go Sport Now — a sports app built by a team of three, from mockups to the app stores. It forced me to think design before code.",
+        "Go Sport Now, a sports app built by a team of three, from mockups to the app stores. It forced me to think design before code.",
     },
     {
       question: "Your motto?",

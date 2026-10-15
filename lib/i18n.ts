@@ -7,11 +7,11 @@ export const localePath = (lang: Lang, path: string) =>
 
 export const ui = {
   fr: {
-    metaTitle: "Anthony Marcelin — Développeur web junior",
+    metaTitle: "Anthony Marcelin, développeur web junior",
     metaDescription:
       "Concepteur Développeur d'Applications. 18 ans chauffeur-grutier → reconversion dev. Next.js, React, Laravel, NestJS, React Native. CDI ou alternance, Bordeaux et alentours ou remote.",
     skipToContent: "Aller au contenu",
-    homeLabel: "Accueil — Anthony Marcelin portfolio",
+    homeLabel: "Accueil du portfolio d'Anthony Marcelin",
     contact: "Me contacter",
     switchLang: "Read in English",
     nav: { home: "Home", projects: "Projets", work: "Work" },
@@ -43,11 +43,11 @@ export const ui = {
     and: "et",
   },
   en: {
-    metaTitle: "Anthony Marcelin — Junior web developer",
+    metaTitle: "Anthony Marcelin, junior web developer",
     metaDescription:
       "Application designer & developer (French CDA certification). 18 years as a crane operator → career change to dev. Next.js, React, Laravel, NestJS, React Native. Open to full-time or work-study roles, Bordeaux area or remote.",
     skipToContent: "Skip to content",
-    homeLabel: "Home — Anthony Marcelin portfolio",
+    homeLabel: "Anthony Marcelin portfolio home",
     contact: "Contact me",
     switchLang: "Lire en français",
     nav: { home: "Home", projects: "Projects", work: "Work" },

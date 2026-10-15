@@ -103,7 +103,7 @@ export const WorkExperience = ({
                 {/* Content */}
                 <div className="flex flex-col gap-1.5">
                   <div className="flex flex-col">
-                    <h4 className="font-medium text-foreground text-sm uppercase truncate">
+                    <h4 className="font-medium text-foreground text-sm uppercase text-balance">
                       {job.company}
                     </h4>
                     <span className="text-[10px] sm:text-xs text-muted-foreground tabular-nums truncate">
