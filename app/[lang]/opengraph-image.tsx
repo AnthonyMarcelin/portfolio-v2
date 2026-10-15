@@ -18,8 +18,7 @@ export default async function Image({
   params: Promise<{ lang: string }>;
 }) {
   const lang = await getLang(params);
-  const photo = await readFile(join(process.cwd(), "public/logo.png"));
-  // logo.png is actually a JPEG.
+  const photo = await readFile(join(process.cwd(), "public/photo.jpg"));
   const photoSrc = `data:image/jpeg;base64,${photo.toString("base64")}`;
 
   return new ImageResponse(

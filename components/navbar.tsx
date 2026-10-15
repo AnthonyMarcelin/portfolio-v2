@@ -10,18 +10,18 @@ export default function Navbar({ lang }: { lang: Lang }) {
   return (
     <div className="h-15 w-full py-2">
       <div className="flex items-center justify-between">
-        <div className="p-px bg-muted rounded-xl ml-1.5">
+        <div className="p-px bg-muted rounded-full ml-1.5">
           <Link
             href={localePath(lang, "/")}
-            className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-xl"
+            className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-full"
             aria-label={t.homeLabel}
           >
             <Image
-              src="/logo.png"
-              alt="Anthony Marcelin logo"
-              width={512}
-              height={512}
-              className="text-black size-8 rounded-xl"
+              src="/photo.jpg"
+              alt="Anthony Marcelin"
+              width={340}
+              height={340}
+              className="size-8 rounded-full"
             />
           </Link>
         </div>
