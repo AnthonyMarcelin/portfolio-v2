@@ -1,6 +1,7 @@
 import {
   Add01FreeIcons,
   AiProgrammingIcon,
+  Download04Icon,
   GitPullRequestIcon,
   Idea01Icon,
   KanbanIcon,
@@ -55,10 +56,14 @@ const HomeGridOne = ({ lang }: { lang: Lang }) => {
           <br />
           {t.heroLine2}
         </div>
-        <div className="flex gap-2.5 items-center w-full">
+        <div className="flex flex-wrap gap-2.5 items-center w-full">
           <SocialButton onClickAction={"mailto:anthony.marcelin13@gmail.com"}>
             <Gmail fill="#00000a" height={12} width={12} />
             <span>{t.mailMe}</span>
+          </SocialButton>
+          <SocialButton onClickAction="/cv-anthony-marcelin.pdf">
+            <HugeiconsIcon icon={Download04Icon} className="size-3" />
+            <span>{t.cv}</span>
           </SocialButton>
         </div>
         <WorkExperience jobs={workExperience[lang]} />
