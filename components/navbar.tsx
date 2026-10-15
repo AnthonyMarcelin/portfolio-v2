@@ -19,8 +19,8 @@ export default function Navbar({ lang }: { lang: Lang }) {
             <Image
               src="/photo.jpg"
               alt="Anthony Marcelin"
-              width={340}
-              height={340}
+              width={640}
+              height={640}
               className="size-8 rounded-full"
             />
           </Link>
